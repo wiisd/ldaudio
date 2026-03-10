@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Portfolio Site</title>
+    <meta property="og:title" content="Portfolio Site" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background: var(--dl-color-gray-white);
+
+        fill: var(--dl-color-gray-black);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="public/deployed_code_24dp_e3e3e3_fill0_wght400_grad0_opsz24.svg"
+      type="icon/png"
+      sizes="32x32"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <!--This is the head section-->
+    <!-- <style> ... </style> -->
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container1">
+        <header id="Top" class="home-thq-header-elm1">
+          <header data-thq="thq-navbar" class="home-thq-navbar-elm">
+            <span class="home-thq-logo-elm1">Lewis Docherty</span>
+            <div
+              data-thq="thq-navbar-nav"
+              data-role="Nav"
+              class="home-thq-desktop-menu-elm"
+            >
+              <nav
+                data-thq="thq-navbar-nav-links"
+                data-role="Nav"
+                class="home-thq-nav-elm1"
+              >
+                <a href="#LearnMore" class="home-link10 button-clean button">
+                  About
+                </a>
+                <a href="#Proj" class="home-link11 button-clean button">
+                  Projects
+                </a>
+                <a href="#Edu" class="home-link12 button-clean button">
+                  Education
+                </a>
+              </nav>
+            </div>
+            <div data-thq="thq-navbar-btn-group" class="home-thq-btn-group-elm">
+              <div class="home-thq-socials-elm1">
+                <a
+                  href="https://bsky.app/profile/wisd.itch.io"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-thq-twitter-elm1 social button"
+                >
+                  <img
+                    alt="image"
+                    src="public/Icons/whitebluesky-200h.png"
+                    class="home-image10"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/lewis-docherty-sound/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-thq-discord-elm1 social button"
+                >
+                  <img
+                    alt="image"
+                    src="public/Icons/linkedin-3-128-200h.png"
+                    class="home-image11"
+                  />
+                </a>
+              </div>
+              <a href="#LearnMore" class="home-thq-view-elm1 button">
+                Contact Me!
+              </a>
+            </div>
+            <div data-thq="thq-burger-menu" class="home-thq-burger-menu-elm">
+              <button class="button home-button">
+                <svg viewBox="0 0 1024 1024" class="home-icon1">
+                  <path
+                    d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div data-thq="thq-mobile-menu" class="home-thq-mobile-menu-elm">
+              <div
+                data-thq="thq-mobile-menu-nav"
+                data-role="Nav"
+                class="home-thq-nav-elm2"
+              >
+                <div class="home-thq-container-elm">
+                  <span class="home-thq-logo-elm2">Lewis Docherty</span>
+                  <div
+                    data-thq="thq-close-menu"
+                    class="home-thq-menu-close-elm"
+                  >
+                    <svg viewBox="0 0 1024 1024" class="home-icon3">
+                      <path
+                        d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <nav
+                  data-thq="thq-mobile-menu-nav-links"
+                  data-role="Nav"
+                  class="home-thq-nav-elm3"
+                >
+                  <a href="#LearnMore" class="home-link13">About</a>
+                  <a href="#Proj" class="home-link14">Projects</a>
+                  <a href="#Edu" class="home-link15">Education</a>
+                </nav>
+                <a href="#Footer" class="home-link16">
+                  <div class="home-container2">
+                    <button class="button">Contact Me!</button>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </header>
+        </header>
+        <section class="home-thq-hero-elm">
+          <div class="home-thq-heading-elm1">
+            <h1 class="home-thq-header-elm2">Audio | PX</h1>
+            <p class="home-thq-caption-elm1">
+              <span>Creating high quality sounds for your earholes</span>
+              <br />
+            </p>
+          </div>
+        </section>
+        <section class="home-thq-description-elm1">
+          <div class="home-thq-divider-image-elm">
+            <img
+              alt="image"
+              src="public/reaper-1200w.png"
+              class="home-image12"
+            />
+          </div>
+          <div id="LearnMore" class="home-container3">
+            <img
+              alt="image"
+              src="public/Icons/transparentmug-400w.png"
+              class="home-image13"
+            />
+            <div class="home-thq-description-elm2">
+              <div class="home-thq-content-elm1">
+                <p class="home-thq-paragraph-elm1">
+                  I'm a sound designer based in Dundee Scotland.
+                </p>
+                <p class="home-thq-paragraph-elm2">
+                  I can design, create and implement audio for any project. From
+                  action to cosy and everything in-between, I can provide top
+                  quality audio to suit a project's needs.
+                </p>
+              </div>
+              <div class="home-thq-links-elm1">
+                <a
+                  href="https://bsky.app/profile/wisd.itch.io"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link17 button"
+                >
+                  <span>Find me on Bluesky!</span>
+                  <img
+                    alt="image"
+                    src="public/Icons/arrow.svg"
+                    class="home-thq-arrow-elm1"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/lewis-docherty-sound/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link18 button"
+                >
+                  <span>or Linkedin!</span>
+                  <img
+                    alt="image"
+                    src="public/Icons/arrow.svg"
+                    class="home-thq-arrow-elm2"
+                  />
+                </a>
+                <button class="home-thq-button-elm button-link">
+                  <span class="home-text14">
+                    <span class="home-text15">or contact me directly at:</span>
+                    <br />
+                    <span>lewis602@rocketmail.com</span>
+                    <br />
+                    <span>+44 7948 604564</span>
+                    <br />
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="Proj" class="home-thq-projects-elm">
+          <span class="home-thq-caption-elm2">Projects</span>
+          <div id="BRS" class="home-thq-card-elm1">
+            <div class="home-thq-avatar-elm1">
+              <img
+                alt="image"
+                src="public/Icons/sports_esports_128dp_e3e3e3_fill0_wght400_grad0_opsz48.svg"
+                class="home-image14"
+              />
+            </div>
+            <div class="home-thq-row-elm1">
+              <div class="home-thq-main-elm1">
+                <div class="home-thq-content-elm2">
+                  <h2 class="home-thq-header-elm3">Blood Removal Service</h2>
+                  <p class="home-thq-description-elm3">
+                    Blood Removal Service is an ongoing project for my Honours
+                    Degree at Abertay University. With a focus on creating a
+                    violence experience for the player without using heavy gore
+                    or viscera, I'm leaning heavily into my audio and visual
+                    effects skills to achieve my intended game feel.
+                  </p>
+                </div>
+                <button class="home-thq-learn-elm1 button">
+                  <span class="home-text21">Releasing on itch.io soon!</span>
+                  <img
+                    alt="image"
+                    src="public/Icons/arrow-2.svg"
+                    class="home-image15"
+                  />
+                </button>
+              </div>
+              <img
+                alt="image"
+                src="public/BloodRemovalService/ragdollpromoexplode01-800w.gif"
+                class="home-image16"
+              />
+            </div>
+          </div>
+          <div id="HoliHooli" class="home-thq-card-elm2">
+            <div class="home-thq-avatar-elm2">
+              <img
+                alt="image"
+                src="public/Icons/sports_esports_128dp_e3e3e3_fill0_wght400_grad0_opsz48.svg"
+                class="home-image17"
+              />
+            </div>
+            <div class="home-thq-row-elm2">
+              <div class="home-thq-main-elm2">
+                <div class="home-thq-content-elm3">
+                  <h2 class="home-thq-header-elm4">Holiday Hooligans</h2>
+                  <p class="home-thq-description-elm4">
+                    A short, fun 'Where's Wally' type game created for the
+                    Global Game Jam 2026. Me and a team of 6 others designed and
+                    developed it in under 48 hours. The theme being 'mask', the
+                    player must find the wanted hooligan based on the mask they
+                    wear while roaming the holiday island. For this project I
+                    undertook all audio design and implementation alongside
+                    other mixed design roles.
+                  </p>
+                </div>
+                <a
+                  href="https://weaseles.itch.io/hideaway-temp"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-thq-learn-elm2 button"
+                >
+                  <span class="home-text22">Playable now!</span>
+                  <img
+                    alt="image"
+                    src="public/Icons/arrow-2.svg"
+                    class="home-image18"
+                  />
+                </a>
+              </div>
+              <img
+                alt="image"
+                src="public/HolidayHooligans/holihooli-800w.png"
+                class="home-image19"
+              />
+            </div>
+          </div>
+          <div id="Footstepper" class="home-thq-card-elm3">
+            <div class="home-thq-avatar-elm3">
+              <img
+                alt="image"
+                src="public/Icons/deployed_code_24dp_e3e3e3_fill0_wght400_grad0_opsz24.svg"
+                class="home-image20"
+              />
+            </div>
+            <div class="home-thq-row-elm3">
+              <div class="home-thq-main-elm3">
+                <div class="home-thq-content-elm4">
+                  <h2 class="home-thq-header-elm5">FOOTSTEPPER</h2>
+                  <p class="home-thq-description-elm5">
+                    Footstepper is a prototype of an audio creation tool I
+                    developed for an audio class during uni. It comes with over
+                    100 high quality footsteps sounds and allows the user to
+                    modulate and tweak the footsteps to suit their needs. With
+                    further development I would like to bring this from just a
+                    demonstration to a full piece of software.
+                  </p>
+                </div>
+                <a
+                  href="https://www.youtube.com/watch?v=rpAmLUlxnnc"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-thq-learn-elm3 button"
+                >
+                  <span class="home-text23">See a demonstration</span>
+                  <img
+                    alt="image"
+                    src="public/Icons/arrow-2.svg"
+                    class="home-image21"
+                  />
+                </a>
+              </div>
+              <img
+                alt="image"
+                src="public/external/pastedimage-d3er-800w.png"
+                class="home-image22"
+              />
+            </div>
+          </div>
+        </section>
+        <section id="Edu" class="home-thq-education-elm">
+          <div class="home-thq-understand-elm">
+            <div class="home-thq-content-elm5">
+              <span class="home-thq-caption-elm3">EDUCATION</span>
+              <div class="home-thq-heading-elm2">
+                <h2 class="home-thq-header-elm6">Abertay University</h2>
+                <p class="home-thq-header-elm7">
+                  <span>
+                    Abertay University is the leading university internationally
+                    for video games design.
+                  </span>
+                  <br />
+                  <span>
+                    Currently, I am working towards my degree in Game Design and
+                    Production. My time at Abertay has been fantastic and I've
+                    met some wonderful people. I hope to take all I've learned
+                    forward into the industry and create some truly special
+                    experiences for people to play.
+                  </span>
+                </p>
+              </div>
+              <a
+                href="https://www.abertay.ac.uk"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="home-thq-view-elm2 button-link button"
+              >
+                <span>Learn More</span>
+                <img
+                  alt="image"
+                  src="public/Icons/arrow.svg"
+                  class="home-image23"
+                />
+              </a>
+            </div>
+            <div class="home-container4">
+              <img
+                alt="image"
+                src="public/Icons/abertay-university-logo-400h.png"
+                class="home-image24"
+              />
+            </div>
+          </div>
+        </section>
+        <footer id="Footer" class="home-thq-footer-elm">
+          <div class="home-thq-main-elm4">
+            <div class="home-thq-branding-elm">
+              <div class="home-thq-heading-elm3">
+                <h2 class="home-thq-logo-elm3">Lewis Docherty</h2>
+                <p class="home-thq-caption-elm4">
+                  Feel free to get in contact via email or phone:
+                </p>
+                <p class="home-thq-caption-elm5">lewis602@rocketmail.com</p>
+                <p class="home-thq-caption-elm6">+44 7948 604564</p>
+              </div>
+              <div class="home-thq-socials-elm2">
+                <a
+                  href="https://bsky.app/profile/wisd.itch.io"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-thq-twitter-elm2 social button"
+                >
+                  <img
+                    alt="image"
+                    src="public/Icons/whitebluesky-200h.png"
+                    class="home-image25"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/lewis-docherty-sound/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-thq-discord-elm2 social button"
+                >
+                  <img
+                    alt="image"
+                    src="public/Icons/linkedin-3-128-200h.png"
+                    class="home-image26 button-clean"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="home-thq-links-elm2">
+              <div class="home-thq-list-elm">
+                <h3 class="home-thq-heading-elm4">Site</h3>
+                <div class="home-thq-items-elm">
+                  <a href="#Top" class="home-thq-link-elm1 button-clean button">
+                    Top
+                  </a>
+                  <a
+                    href="#LearnMore"
+                    class="home-thq-link-elm2 button-clean button"
+                  >
+                    About
+                  </a>
+                  <a
+                    href="#Proj"
+                    class="home-thq-link-elm3 button-clean button"
+                  >
+                    Projects
+                  </a>
+                  <a href="#Edu" class="home-thq-link-elm4 button-clean button">
+                    Education
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="home-thq-socials-elm3">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="home-thq-twitter-elm3 social button"
+              >
+                <img
+                  alt="image"
+                  src="public/Icons/twitter.svg"
+                  class="home-image27"
+                />
+              </a>
+              <a
+                href="https://discord.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="home-thq-discord-elm3 social button"
+              >
+                <img
+                  alt="image"
+                  src="public/Icons/discord.svg"
+                  class="home-image28"
+                />
+              </a>
+            </div>
+          </div>
+        </footer>
+        <div>
+          <div class="home-container6">
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                /*
+                  Accordion - Code Embed
+                  */
+                  const accordionContainers = document.querySelectorAll('[data-role="accordion-container"]'); // All accordion containers
+                  const accordionContents = document.querySelectorAll('[data-role="accordion-content"]'); // All accordion content
+                  const accordionIconsClosed = document.querySelectorAll('[data-role="accordion-icon-closed"]'); // All accordion closed icons
+                  const accordionIconsOpen = document.querySelectorAll('[data-role="accordion-icon-open"]'); // All accordion open icons
+
+                  accordionContents.forEach((accordionContent) => {
+                      accordionContent.style.display = "none"; //Hides all accordion contents
+                  });
+
+                  accordionIconsClosed.forEach((icon) => {
+                    icon.style.display = "flex"
+                  })
+
+                  accordionIconsOpen.forEach((icon) => {
+                    icon.style.display = "none"
+                  })
+
+                  accordionContainers.forEach((accordionContainer, index) => {
+                      accordionContainer.addEventListener("click", () => {
+                          if (accordionContents[index].style.display === "flex") {
+                              // If the accordion is already open, close it
+                              accordionContents[index].style.display = "none";
+                              accordionIconsClosed[index].style.display = "flex";
+                              accordionIconsOpen[index].style.display = "none"
+                          } else {
+                              // If the accordion is closed, open it
+                              accordionContents.forEach((accordionContent) => {
+                                  accordionContent.style.display = "none"; //Hides all accordion contents
+                              });
+
+                              accordionIconsClosed.forEach((accordionIcon) => {
+                                  accordionIcon.style.display = "flex"; // Resets all icon transforms to 0deg (default)
+                              });
+
+                              accordionIconsOpen.forEach((accordionIcon) => {
+                                accordionIcon.style.display = "none";
+                              })
+
+                              accordionContents[index].style.display = "flex"; // Shows accordion content
+                              accordionIconsClosed[index].style.display = "none"; // Rotates accordion icon 180deg
+                              accordionIconsOpen[index].style.display = "flex";
+                          }
+                      });
+                  });
+              });
+            </script>
+          </div>
+        </div>
+        <a href="https://play.teleporthq.io/signup" class="home-link19">
+          <div aria-label="Sign up to TeleportHQ" class="home-container7">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 19 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="home-icon5"
+            >
+              <path
+                d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
+                fill="#B23ADE"
+              ></path>
+              <path
+                d="M10.9733 12.7878C14.4208 12.7878 17.2156 10.0706 17.2156 6.71886C17.2156 3.3671 14.4208 0.649963 10.9733 0.649963C7.52573 0.649963 4.73096 3.3671 4.73096 6.71886C4.73096 10.0706 7.52573 12.7878 10.9733 12.7878Z"
+                fill="#FF5C5C"
+              ></path>
+              <path
+                d="M17.7373 13.3654C19.1497 14.1588 19.1497 15.4634 17.7373 16.2493L10.0865 20.5387C8.67402 21.332 7.51855 20.6836 7.51855 19.0968V10.5141C7.51855 8.92916 8.67402 8.2807 10.0865 9.07221L17.7373 13.3654Z"
+                fill="#2874DE"
+              ></path>
+            </svg>
+            <span class="home-text28">Built in TeleportHQ</span>
+          </div>
+        </a>
+      </div>
+      <link rel="canonical" href="https://lewisdochertyaudio.teleporthq.app/" />
+    </div>
+    <script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+.items-thq-items-elm {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.items-thq-element-elm1 {
+  align-items: flex-start;
+}
+ 
+.items-thq-content-elm1 {
+  gap: var(--dl-layout-space-oneandhalfunits);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.items-thq-header-elm1 {
+  font-size: 24px;
+}
+ 
+.items-thq-description-elm1 {
+  font-size: 18px;
+  max-width: 800px;
+  line-height: 27px;
+}
+ 
+.items-thq-icon-container-elm1 {
+  position: relative;
+  padding-top: var(--dl-layout-space-halfunit);
+}
+ 
+.items-icon10 {
+  fill: #ffffff;
+  width: 16px;
+  height: 16px;
+  display: none;
+}
+ 
+.items-icon12 {
+  fill: #ffffff;
+  width: 16px;
+  height: 16px;
+}
+ 
+.items-thq-element-elm2 {
+  align-items: flex-start;
+}
+ 
+.items-thq-content-elm2 {
+  gap: var(--dl-layout-space-oneandhalfunits);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.items-thq-header-elm2 {
+  font-size: 24px;
+}
+ 
+.items-thq-description-elm2 {
+  font-size: 18px;
+  max-width: 800px;
+  line-height: 27px;
+}
+ 
+.items-thq-icon-container-elm2 {
+  padding-top: var(--dl-layout-space-halfunit);
+}
+ 
+.items-icon14 {
+  fill: #ffffff;
+  width: 16px;
+  height: 16px;
+  display: none;
+}
+ 
+.items-icon16 {
+  fill: #ffffff;
+  width: 16px;
+  height: 16px;
+}
+ 
+.items-thq-element-elm3 {
+  align-items: flex-start;
+}
+ 
+.items-thq-content-elm3 {
+  gap: var(--dl-layout-space-oneandhalfunits);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.items-thq-header-elm3 {
+  font-size: 24px;
+}
+ 
+.items-thq-description-elm3 {
+  font-size: 18px;
+  max-width: 800px;
+  line-height: 27px;
+}
+ 
+.items-thq-icon-container-elm3 {
+  padding-top: var(--dl-layout-space-halfunit);
+}
+ 
+.items-icon18 {
+  fill: #ffffff;
+  width: 16px;
+  height: 16px;
+  display: none;
+}
+ 
+.items-icon20 {
+  fill: #ffffff;
+  width: 16px;
+  height: 16px;
+}
+ 
+@media(max-width: 767px) {
+  .items-thq-element-elm2 {
+    align-items: flex-start;
+  }
+}
+ 
+@media(max-width: 479px) {
+  .items-thq-header-elm1 {
+    font-size: 16px;
+  }
+  .items-thq-description-elm1 {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .items-thq-header-elm2 {
+    font-size: 16px;
+  }
+  .items-thq-description-elm2 {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .items-thq-header-elm3 {
+    font-size: 16px;
+  }
+  .items-thq-description-elm3 {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
