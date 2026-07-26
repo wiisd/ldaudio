@@ -327,6 +327,10 @@
   width: 100%;
   max-width: var(--dl-layout-size-maxwidth);
 }
+
+.ld-shifu-secret{
+	width: 100%;
+	max-width: var(--dl-layout-size-xlarge);
  
 .thq-img-ratio-1-1 {
   width: 100%;
