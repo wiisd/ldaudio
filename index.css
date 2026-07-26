@@ -495,7 +495,7 @@
 .home-thq-projects-elm {
   gap: var(--dl-layout-space-fiveunits);
   width: 100%;
-  height: 3358px;
+  height: auto;
   display: flex;
   max-width: 1440px;
   align-self: center;
@@ -529,7 +529,7 @@
   padding-right: var(--dl-layout-space-fiveunits);
   flex-direction: column;
   padding-bottom: var(--dl-layout-space-fourunits);
-  background-color: #45b97f;
+  background-color: #456ab9;
 }
  
 .home-thq-avatar-elm1 {
@@ -776,7 +776,7 @@
   padding-right: var(--dl-layout-space-fiveunits);
   flex-direction: column;
   padding-bottom: var(--dl-layout-space-fourunits);
-  background-color: #E3B23C;
+  background-color: #456ab9;
 }
  
 .home-thq-avatar-elm3 {
@@ -911,7 +911,7 @@
   padding-right: var(--dl-layout-space-fiveunits);
   flex-direction: column;
   padding-bottom: var(--dl-layout-space-fourunits);
-  background-color: #E84855;
+  background-color: #456ab9;
 }
  
 .home-thq-avatar-elm4 {
